@@ -12,7 +12,7 @@ public class Db_Operation {
 	static boolean eQuery = false;
 	public static boolean insertStudent(int sId, String sName, String sGender) {
 		
-		try(Connection con = Db_Connection.CreateCon();) {
+		try(Connection con = Db_Connection.createCon();) {
 			String iQuery = "insert into student(sId, sname, sgender) values(?, ?, ?)";
 			pstmt = con.prepareStatement(iQuery);
 			
@@ -32,7 +32,7 @@ public class Db_Operation {
 	
 	public static boolean deleteStudent(String name) {
 
-		try(Connection con = Db_Connection.CreateCon();) {
+		try(Connection con = Db_Connection.createCon();) {
 			String dQuery = "delete from student where sname = ?";
 			pstmt = con.prepareStatement(dQuery);
 			pstmt.setString(1, name);
@@ -47,7 +47,7 @@ public class Db_Operation {
 	// update sid
 	public static boolean updateStudent(int sId, String sName) {
 		
-		try(Connection con = Db_Connection.CreateCon()) {
+		try(Connection con = Db_Connection.createCon()) {
 			String uSIdQuery = "update student set sid=? where sname=?";
 			// update sid
 			pstmt = con.prepareStatement(uSIdQuery);
@@ -65,7 +65,7 @@ public class Db_Operation {
 	
 	// update sname
 	public static boolean updateStudent(String sName, int sid) {
-		try(Connection con = Db_Connection.CreateCon()) {
+		try(Connection con = Db_Connection.createCon()) {
 			String uSNameQuery = "update student set sname=? where sid =?";
 			
 			pstmt = con.prepareStatement(uSNameQuery);
@@ -83,7 +83,7 @@ public class Db_Operation {
 	
 	// update sgender
 	public static boolean updateStudent(String sGender, String sName) {
-		try(Connection con = Db_Connection.CreateCon()) {
+		try(Connection con = Db_Connection.createCon()) {
 			String uSGenderQuery = "update student set sgender=? where sname=?";
 
 			pstmt = con.prepareStatement(uSGenderQuery);
@@ -100,7 +100,7 @@ public class Db_Operation {
 	
 	public static boolean selectStudent() {
 		
-		try(Connection con = Db_Connection.CreateCon();
+		try(Connection con = Db_Connection.createCon();
 				Statement stmt = con.createStatement()) {
 			String sQuery = "select * from student";
 			

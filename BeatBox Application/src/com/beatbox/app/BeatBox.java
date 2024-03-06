@@ -1,15 +1,16 @@
 package com.beatbox.app;
 
-import javax.sound.midi.*;
-import javax.swing.*;
-import javax.swing.event.*;
+import static javax.sound.midi.ShortMessage.*;
+
 import java.awt.*;
 import java.io.*;
 import java.net.Socket;
 import java.util.*;
 import java.util.concurrent.*;
 
-import static javax.sound.midi.ShortMessage.*;
+import javax.sound.midi.*;
+import javax.swing.*;
+import javax.swing.event.*;
 
 public class BeatBox {
 
