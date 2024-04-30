@@ -26,4 +26,10 @@ public class Task {
 		return dueDate;
 	}
 	
+	// toString method to override the task variables
+	@Override
+	public String toString() {
+		return this.taskNo + " " + this.taskName + " " + this.dueDate;
+	}
+	
 }
