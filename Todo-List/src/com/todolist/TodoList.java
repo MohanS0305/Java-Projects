@@ -15,10 +15,21 @@ public class TodoList {
 	public void addTask(Task task) {
 		tasks.add(task);
 	}
-	// remove method for remove the task
+	
+	// remove method for remove the task by task object
 	public void removeTask(Task task) {
 		tasks.remove(task);
 	}
+	
+	// remove method for remove the task by index
+	public void removeTask(int removeTask) {
+		if (removeTask > 0 && removeTask <= tasks.size()) {
+			tasks.remove(removeTask - 1);
+		} else {
+			System.out.println("Invalid task number");
+		}
+	}
+	
 	
 	// display method for display all the task
 	public void displayTasks() {
