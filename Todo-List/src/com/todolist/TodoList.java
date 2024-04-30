@@ -22,9 +22,9 @@ public class TodoList {
 	}
 	
 	// remove method for remove the task by index
-	public void removeTask(int removeTask) {
-		if (removeTask > 0 && removeTask <= tasks.size()) {
-			tasks.remove(removeTask - 1);
+	public void removeTask(int index) {
+		if (index > 0 && index <= tasks.size()) {
+			tasks.remove(index - 1);
 		} else {
 			System.out.println("Invalid task number");
 		}
@@ -34,8 +34,8 @@ public class TodoList {
 	// display method for display all the task
 	public void displayTasks() {
 		// iterate through all the task object and print it
-		for (Task task : tasks) {
-			System.out.println(task);
+		for (int i = 0; i < tasks.size(); i++) {
+			System.out.println((i + 1) + "." + tasks.get(i));
 		}
 	}
 }
