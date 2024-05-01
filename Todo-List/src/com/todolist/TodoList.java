@@ -34,8 +34,8 @@ public class TodoList {
 	// display method for display all the task
 	public void displayTasks() {
 		// iterate through all the task object and print it
-		for (int i = 0; i < tasks.size(); i++) {
-			System.out.println((i + 1) + "." + tasks.get(i));
+		for(Task task : tasks) {
+			System.out.println(task);
 		}
 	}
 }
