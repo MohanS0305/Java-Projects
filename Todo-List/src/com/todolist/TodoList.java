@@ -1,14 +1,14 @@
 package com.todolist;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class TodoList {
 	// array list for store the task
-	private ArrayList<Task> tasks;
+	private LinkedList<Task> tasks;
 	
 	// constructor for todoList
 	public TodoList() {
-		this.tasks = new ArrayList<>();
+		this.tasks = new LinkedList<>();
 	}
 	
 	// add method for add the task
